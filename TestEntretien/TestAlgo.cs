@@ -18,14 +18,24 @@ namespace TestEntretien
             Console.WriteLine("GroupAnagram start");
             string[] input = { "reza","eat", "tea", "tan", "ate", "nat", "bat", "bta", "azer" };
 
-           
+            var keys = input.Select(x => OrderChars(x)).Distinct();
+            Dictionary<string, List<string>> output = new Dictionary<string, List<string>>();
+            foreach (var item in keys)
+            {
+                output.Add(item, input.Where(x=> OrderChars(x) == item).Select(x=>x).ToList());
+            }
+        }
+
+        private static string OrderChars(string s) 
+        {
+            return new String(s.OrderBy(x => x).ToArray());
         }
 
         public static void SortInt()
         {
             int[] numbers = Enumerable.Range(0, 10).OrderBy(xp => Guid.NewGuid()).ToArray();
            
-           
+            
             
 
 

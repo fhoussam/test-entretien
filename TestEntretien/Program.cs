@@ -9,7 +9,7 @@ namespace TestEntretien
             Console.WriteLine("starting..");
 
             //TestAlgo.GroupAnagram();
-            TestLinq.IndexAddition();
+            TestLinq.Sum2List();
             //TestRefacto_3.Run();
 
             Console.WriteLine("complete");

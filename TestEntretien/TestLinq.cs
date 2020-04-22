@@ -18,6 +18,10 @@ namespace TestEntretien
             {
                 {"a",10 },{"c",22},{"b",7896}
             };
+
+            //var result = (from x in a.Union(b) group x.Value by x.Key into g select new { g.Key, g.Sum() });
+
+            //var result = a.Union(b).Select(x => new { Key = x.Key, value = x.Value }).GroupBy(x => new { x. }).ToDictionary(g => g.Key, g => g.Sum());
         }
 
         /// <summary>
