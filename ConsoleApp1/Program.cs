@@ -1,4 +1,5 @@
 ﻿using ConsoleApp1;
+using ConsoleApp1.MT;
 
 //csharp_interviews
 //Exo_4.Main();
@@ -13,4 +14,6 @@
 //Exo_13.Main();
 //Exo_14.Main();
 //Exo_15.Main();
-Exo_16.Main();
+//Exo_16.Main();
+//MTH1.Main();
+MTH2.Main();
