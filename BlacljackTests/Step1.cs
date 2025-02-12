@@ -37,7 +37,7 @@ namespace BlacljackTests
         public void Should_value_ten_when_card_displays_ace()
         {
             ICard card = new Card("A");
-            Assert.IsTrue(10 == card.GetPoints());
+            Assert.IsTrue(11 == card.GetPoints());
         }
     }
 }
