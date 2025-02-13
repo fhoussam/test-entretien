@@ -8,9 +8,9 @@ namespace BlacljackTests
         [TestMethod]
         public void Should_have_fourteen_points_when_cards_are_eight_and_six()
         {
-            ICard firstCard = new Card("8");
-            ICard secondCard = new Card("6");
-            IHand hand = new Hand(firstCard, secondCard);
+            ICard firstCard = new Card(Rank.Eight);
+            ICard secondCard = new Card(Rank.Six);
+            IHand hand = new Hand(new[] { firstCard, secondCard });
 
             Assert.IsTrue(14 == hand.GetPoints());
         }
@@ -18,10 +18,10 @@ namespace BlacljackTests
         [TestMethod]
         public void Should_have_nineteen_points_when_cards_are_eight_and_six_and_five()
         {
-            ICard firstCard = new Card("8");
-            ICard secondCard = new Card("6");
-            ICard thirdCard = new Card("5");
-            IHand hand = new Hand(firstCard, secondCard);
+            ICard firstCard = new Card(Rank.Eight);
+            ICard secondCard = new Card(Rank.Six);
+            ICard thirdCard = new Card(Rank.Five);
+            IHand hand = new Hand(new[] { firstCard, secondCard });
 
             hand.AddCard(thirdCard);
 
@@ -31,11 +31,11 @@ namespace BlacljackTests
         [TestMethod]
         public void Should_have_seventeen_points_when_cards_are_four_and_five_and_two_and_six()
         {
-            ICard firstCard = new Card("4");
-            ICard secondCard = new Card("5");
-            ICard thirdCard = new Card("2");
-            ICard fourthCard = new Card("6");
-            IHand hand = new Hand(firstCard, secondCard);
+            ICard firstCard = new Card(Rank.Four);
+            ICard secondCard = new Card(Rank.Five);
+            ICard thirdCard = new Card(Rank.Two);
+            ICard fourthCard = new Card(Rank.Six);
+            IHand hand = new Hand(new[] { firstCard, secondCard });
 
             hand.AddCard(thirdCard);
             hand.AddCard(fourthCard);
